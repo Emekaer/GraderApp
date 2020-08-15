@@ -4,6 +4,7 @@ A simple application built with React Native for calculating GPAs on a 4 point s
 
 - User Sign In & Authentication
 - Persistent Data
+- A splash screen
 
 This application can run both on Android and on IOS.
 
