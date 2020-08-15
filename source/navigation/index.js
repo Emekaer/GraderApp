@@ -17,7 +17,7 @@ const defaultNavOps = {
   headerTitleAlign: "center",
   headerTitleStyle: {
     color: "white",
-    marginTop: 20,
+    fontSize: 28,
   },
 };
 
@@ -57,7 +57,6 @@ const AppDrawer = () => {
       drawerContentOptions={{
         activeBackgroundColor: "black",
         activeTintColor: "white",
-        marginTop: 30,
       }}
     >
       <Drawer.Screen name="Home" component={HomeStack} />

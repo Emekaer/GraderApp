@@ -9,7 +9,6 @@ const CustomHeaderButton = (props) => {
       IconComponent={Ionicons}
       iconSize={23}
       color={props.colour ? props.colour : "white"}
-      buttonStyle={{ marginTop: 20 }}
     />
   );
 };

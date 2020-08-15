@@ -5,12 +5,16 @@ import ResultData from '../components/ResultData';
 
 const homeScreen = (props) => {
   const [Data, setData] = useState([]);
+
+
   const submitHandler = (data) => {
     const result = Data.concat(data);
     console.log(result);
     setData(result);
     console.log(Data);
   };
+
+
   const gpCalculatorHandler = () => {
     let sum = 0;
     let totalUnits = 0;
@@ -33,12 +37,20 @@ const homeScreen = (props) => {
     Alert.alert('Final Result', `Your G.P.A =${totalGrade.toFixed(2)}`);
   };
 
+  const deleteHandler=(pid)=>{
+      console.log(pid)
+    const result = Data.filter((id)=> id.courseCode !== pid);
+    console.log(result);
+    setData(result);
+
+  }
+
   return (
     <View style={styles.mainView}>
       <View style={styles.inputRegion}>
         <ResultRow submitHandler={(data) => submitHandler(data)} />
       </View>
-      {Data.lenght < 1 ? null : (
+      {Data.length == 0 ? null : (
         <View style={styles.row}>
           <View style={styles.sn}>
             <Text style={styles.text}>No.</Text>
@@ -62,8 +74,9 @@ const homeScreen = (props) => {
               courseCode={item.courseCode}
               courseUnits={item.courseUnits}
               grade={item.grade}
-
-              //grade={item.grade}
+              delete={() => {
+                deleteHandler(item.courseCode);
+              }}
             />
           </View>
         )}
@@ -93,7 +106,7 @@ const styles = StyleSheet.create({
     marginHorizontal: 15,
   },
   info: {
-    flex: 1,
+   width: "90%",
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-evenly',
