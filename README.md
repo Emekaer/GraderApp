@@ -1,6 +1,6 @@
 # GraderApp
 
-A simple application built with React Native for calculating GPAs on a 4 point scale. It has has error handling and input of countless number of courses. Due to time constraints the following are missing
+A simple application built with React Native for calculating GPAs on a 4 point scale. You are also allowed to delete wrong information. It has has error handling and input of countless number of courses. Due to time constraints the following are missing
 
 - User Sign In & Authentication
 - Persistent Data
